@@ -2,10 +2,10 @@
 <idea-plugin>
   <id>com.xscriptor.theme</id>
   <name>Xscriptor Theme</name>
-  <version>1.0.1</version>
+  <version>1.1.0</version>
   <vendor email="x@xscriptor.com" url="https://github.com/xscriptordev">Xscriptor</vendor>
   
-  <!-- Icono del plugin -->
+  <!-- Plugin icon -->
   <icon>pluginIcon.svg</icon>
 
   <description><![CDATA[
@@ -17,35 +17,37 @@
 ]]></description>
 
 <change-notes><![CDATA[
-  1.0.1 — Added light theme variant with matching editor color scheme. Both dark and light themes now available. Update repo.
+  1.1.0 — Migrated to Gradle 9 and the new IntelliJ Platform Gradle Plugin (2.x), updated target platform to 2025.3, configured Java 21 toolchain, and fixed ZIP packaging for IDE import. Broad product compatibility retained.
+  1.0.1 — Added light theme variant with matching editor color scheme. Both dark and light themes available.
   1.0.0 — Initial release with full UI theme and editor scheme.
 ]]></change-notes>
 
 
-  <!-- Compatibilidad con versiones de IntelliJ/Android Studio -->
-  <idea-version since-build="211" until-build="252.*"/>
+  <!-- Compatibility with IntelliJ/Android Studio versions -->
+  <idea-version since-build="211" until-build="253.*"/>
 
-  <!-- Dependencias del plugin -->
+  <!-- Plugin dependencies -->
   <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.json</depends>
 
-  <!-- Extensiones del plugin -->
+  <!-- Plugin extensions -->
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Registro del tema UI claro -->
+    <!-- Register light UI theme -->
     <themeProvider id="xscriptor.light.theme" path="/themes/xscriptor_light_theme.theme.json"/>
     
-    <!-- Registro del tema UI oscuro (predeterminado) -->
+    <!-- Register dark UI theme (default) -->
     <themeProvider id="xscriptor.theme" path="/themes/xscriptor_theme.theme.json"/>
     
-    <!-- Registro del esquema de colores del editor claro -->
+    <!-- Register light editor color scheme -->
     <bundledColorScheme path="/colors/Xscriptor Light Theme.xml"/>
     
-    <!-- Registro del esquema de colores del editor oscuro (predeterminado) -->
+    <!-- Register dark editor color scheme (default) -->
     <bundledColorScheme path="/colors/Xscriptor Theme.xml"/>
   </extensions>
 
-  <!-- Acciones del plugin -->
+  <!-- Plugin actions -->
   <actions>
-    <!-- Grupo de acciones para el tema -->
+    <!-- Action group for the theme -->
     <group id="XscriptorTheme.Actions" text="Xscriptor Theme" popup="true">
       <add-to-group group-id="ToolsMenu" anchor="last"/>
     </group>

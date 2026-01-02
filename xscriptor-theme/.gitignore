@@ -1,0 +1,14 @@
+# Gradle
+.gradle/
+.gradle-user/
+build/
+
+# IntelliJ / Android Studio
+.intellijPlatform/
+.idea/
+*.iml
+out/
+
+# Configuración y archivos temporales
+local.properties
+.DS_Store
