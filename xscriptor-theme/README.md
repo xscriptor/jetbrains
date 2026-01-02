@@ -48,6 +48,12 @@ A clean light variant with inverted colors maintaining the same visual hierarchy
 ### Option 2: Build from Source
 ```bash
 ./gradlew buildPlugin
+
+#or 
+
+./gradlew --stop
+rm -rf ~/.gradle/caches
+./gradlew clean buildPlugin --refresh-dependencies
 ```
 
 ## Features
@@ -73,7 +79,7 @@ A clean light variant with inverted colors maintaining the same visual hierarchy
 
 ## License
 
-MIT License
+[MIT License](https://github.com/xscriptordev/jetbrains/xscriptor-theme/blob/main/LICENSE)
 
 ## Contributing
 
