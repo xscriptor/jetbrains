@@ -1,0 +1,9 @@
+*.kts linguist-language=Kotlin
+
+src/main/resources/themes/*.json linguist-documentation
+src/main/resources/colors/*.xml linguist-documentation
+
+src/main/resources/META-INF/*.xml linguist-documentation
+
+*.png binary
+*.svg binary
