@@ -1,68 +1,33 @@
-# Xscriptor Jetbrains
+<h1 align="center"> Xscriptor Jetbrains </h1>
 
-A minimal dual-theme pack (Dark + Light) for Android Studio and IntelliJ IDEA, designed with strong contrast, vibrant accents, and consistent visual hierarchy.
+<p align="center"><img src="./assets/icon.png" width="200" alt="Xscriptor logo" /></p>
 
-Essential settings and customizations to improve accessibility and personalization of JetBrains IDEs using the Xscriptor ecosystem (themes, snippets, UI mods).
+A centralized collection of resources, themes, and configurations designed to enhance the development experience across the JetBrains IDE family. This repository serves as the core for the Xscriptor ecosystem, integrating visual enhancements, accessibility adjustments, and UI modifications.
+
+Our goal is to provide a consistent, high-contrast, and vibrant workspace for developers using Android Studio, IntelliJ IDEA, and beyond.
 
 ## Structure
 
-This repository is organized into:
+- **[xscriptor-theme](./xscriptor-theme)**: The main theme pack for Android Studio and IntelliJ IDEA.
+- **[assets](./assets)**: Resources like icons and branding for the Xscriptor ecosystem.
 
 ## Previews
 
-![Preview](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview.png)
-
-![Preview 3](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview3.png)
-
-![Preview 4](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview4.png)
-
-![Preview 5](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview5.png)
-
-![Preview 6](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview6.png)
-
-## Color Palette
-
-### Dark Theme
-- **Background**: Deep black (#0a0a0a) with subtle variations
-- **Accent**: Vibrant pink (#fc618d) for highlights and focus elements
-- **Secondary Accent**: Bright cyan (#5ad4e6) for complementary elements
-- **Success**: Fresh green (#7bd88f) for positive states
-- **Warning**: Warm orange (#fd9353) for attention
-- **Info**: Soft purple (#948ae3) for informational elements
-
-### Light Theme
-- **Background**: Pure white (#ffffff) with light gray variations
-- **Accent**: Same vibrant pink (#fc618d) for consistency
-- **Secondary Accent**: Same bright cyan (#5ad4e6) for complementary elements
-- **Text**: Dark colors for optimal readability on light backgrounds
-
-## Installation
-
-### Option 1: Manual Installation
-1. Download the theme files
-2. Copy to your IDE's plugins directory
-3. Restart your IDE
-4. Go to Settings → Appearance & Behavior → Appearance → Theme
-5. Select "Xscriptor Theme" (dark) or "Xscriptor Light Theme" (light)
-
-### Option 2: Build from Source
-```bash
-./gradlew buildPlugin
-```
-
-## Features
-
-- **Dual Theme Support**: Both dark and light variants available
-- Complete UI themes with consistent design language
-- Matching editor color schemes for both themes
-- Enhanced readability with carefully selected contrast ratios
-- Support for Java, Kotlin, XML, JSON, CSS, and more
-- Modern, minimalist interface design
-
-## Compatibility
-
-- Android Studio 2021.1+
-- IntelliJ IDEA 2021.1+
+<table border="0">
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview.png" width="400" alt="Preview 1" /></td>
+    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview3.png" width="400" alt="Preview 3" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview4.png" width="400" alt="Preview 4" /></td>
+    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview5.png" width="400" alt="Preview 5" /></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview6.png" width="400" alt="Preview 6" />
+    </td>
+  </tr>
+</table>
 
 ## License
 
