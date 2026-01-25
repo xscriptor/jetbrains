@@ -29,7 +29,7 @@ A centralized collection of resources, themes, and configurations designed to en
 </p>
 
 <details>
-  <summary>previews</summary>
+  <summary>More</summary>
 
   <table>
     <tr>
