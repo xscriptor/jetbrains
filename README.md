@@ -1,33 +1,61 @@
 <h1 align="center"> Xscriptor Jetbrains </h1>
 
-<p align="center"><img src="./assets/icon.png" width="200" alt="Xscriptor logo" /></p>
+
+
+<div align="center">
 
 A centralized collection of resources, themes, and configurations designed to enhance the development experience across the JetBrains IDE family. This repository serves as the core for the Xscriptor ecosystem, integrating visual enhancements, accessibility adjustments, and UI modifications.
 
-Our goal is to provide a consistent, high-contrast, and vibrant workspace for developers using Android Studio, IntelliJ IDEA, and beyond.
+
+![android-studio](https://xscriptordev.github.io/badges/ide/android-studio.svg) ![goland](https://xscriptordev.github.io/badges/ide/goland.svg) ![intellij](https://xscriptordev.github.io/badges/ide/intellij.svg) ![pytorch](https://xscriptordev.github.io/badges/ai/pytorch.svg) ![pycharm](https://xscriptordev.github.io/badges/ide/pycharm.svg) ![clion](https://xscriptordev.github.io/badges/ide/clion.svg)
+
+</div>
+
+<p align="center"><img src="./assets/icon.png" width="100" alt="Xscriptor logo" /></p>
+
+
 
 ## Structure
 
 - **[xscriptor-theme](./xscriptor-theme)**: The main theme pack for Android Studio and IntelliJ IDEA.
 - **[assets](./assets)**: Resources like icons and branding for the Xscriptor ecosystem.
 
-## Previews
+## Preview
 
-<table border="0">
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview.png" width="400" alt="Preview 1" /></td>
-    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview3.png" width="400" alt="Preview 3" /></td>
-  </tr>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview4.png" width="400" alt="Preview 4" /></td>
-    <td><img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview5.png" width="400" alt="Preview 5" /></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview6.png" width="400" alt="Preview 6" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="./assets/previews/preview6.png">
+    <img src="./assets/previews/preview6.png" alt="Main preview" width="850"/>
+  </a>
+</p>
+
+<details>
+  <summary>previews</summary>
+
+  <table>
+    <tr>
+      <td align="center">
+        <a href="./assets/previews/preview.png">
+          <img src="./assets/previews/preview2.png" alt="Preview 2" width="380"/>
+        </a>
+      </td>
+      <td align="center">
+        <a href="./assets/previews/preview3.png">
+          <img src="./assets/previews/preview3.png" alt="Preview 3" width="380"/>
+        </a>
+      </td>
+      <td align="center">
+        <a href="./assets/previews/preview3.png">
+          <img src="./assets/previews/preview4.png" alt="Preview 4" width="380"/>
+        </a>
+      </td>
+      <td align="center">
+        <a href="./assets/previews/preview5.png">
+          <img src="./assets/previews/preview5.png" alt="Preview 4" width="380"/>
+        </a>
+      </td>
+    </tr>
+  </table>
+</details>
 
 ## License
 
