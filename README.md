@@ -7,7 +7,7 @@
 A centralized collection of resources, themes, and configurations designed to enhance the development experience across the JetBrains IDE family. This repository serves as the core for the Xscriptor ecosystem, integrating visual enhancements, accessibility adjustments, and UI modifications.
 
 
-![android-studio](https://xscriptordev.github.io/badges/ide/android-studio.svg) ![goland](https://xscriptordev.github.io/badges/ide/goland.svg) ![intellij](https://xscriptordev.github.io/badges/ide/intellij.svg) ![pytorch](https://xscriptordev.github.io/badges/ai/pytorch.svg) ![pycharm](https://xscriptordev.github.io/badges/ide/pycharm.svg) ![clion](https://xscriptordev.github.io/badges/ide/clion.svg)
+![android-studio](https://xscriptor.github.io/badges/ide/android-studio.svg) ![goland](https://xscriptor.github.io/badges/ide/goland.svg) ![intellij](https://xscriptor.github.io/badges/ide/intellij.svg) ![pytorch](https://xscriptor.github.io/badges/ai/pytorch.svg) ![pycharm](https://xscriptor.github.io/badges/ide/pycharm.svg) ![clion](https://xscriptor.github.io/badges/ide/clion.svg)
 
 </div>
 

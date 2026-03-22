@@ -3,7 +3,7 @@
   <id>com.xscriptor.theme</id>
   <name>Xscriptor Theme</name>
   <version>1.1.0</version>
-  <vendor email="x@xscriptor.com" url="https://github.com/xscriptordev">Xscriptor</vendor>
+  <vendor email="x@xscriptor.com" url="https://github.com/xscriptor">Xscriptor</vendor>
   
   <!-- Plugin icon -->
   <icon>pluginIcon.svg</icon>

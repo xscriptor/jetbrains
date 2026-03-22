@@ -12,13 +12,13 @@ A clean light variant with inverted colors maintaining the same visual hierarchy
 
 ## Preview
 
-![Preview 1](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview.png)
+![Preview 1](https://raw.githubusercontent.com/xscriptor/jetbrains/main/xscriptor-theme/preview/preview.png)
 
-![Preview 2](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview2.png)
+![Preview 2](https://raw.githubusercontent.com/xscriptor/jetbrains/main/xscriptor-theme/preview/preview2.png)
 
-![Preview 3](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview3.png)
+![Preview 3](https://raw.githubusercontent.com/xscriptor/jetbrains/main/xscriptor-theme/preview/preview3.png)
 
-![Preview 4](https://raw.githubusercontent.com/xscriptordev/jetbrains/main/xscriptor-theme/preview/preview4.png)
+![Preview 4](https://raw.githubusercontent.com/xscriptor/jetbrains/main/xscriptor-theme/preview/preview4.png)
 
 ## Color Palette
 
@@ -79,7 +79,7 @@ rm -rf ~/.gradle/caches
 
 ## License
 
-[MIT License](https://github.com/xscriptordev/jetbrains/xscriptor-theme/blob/main/LICENSE)
+[MIT License](https://github.com/xscriptor/jetbrains/xscriptor-theme/blob/main/LICENSE)
 
 ## Contributing
 
