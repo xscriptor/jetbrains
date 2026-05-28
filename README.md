@@ -12,7 +12,7 @@
   <img src="./assets/icon.png" width="100" alt="Xscriptor logo" />
 </p>
 
-<h2 align="center">Table of Contents</h2>
+<h2 align="center">Contents</h2>
 <p align="center">
   <a href="#structure">Structure</a> •
   <a href="#preview">Preview</a> •
@@ -24,7 +24,10 @@
 
 <ul>
   <li><b><a href="./xscriptor-theme">xscriptor-theme</a></b>: The main theme pack for Android Studio and IntelliJ IDEA.</li>
+  <li><b><a href="./xscriptor-theme/scripts/docs">scripts/docs</a></b>: Theme generator script documentation and usage guide.</li>
   <li><b><a href="./assets">assets</a></b>: Resources like icons and branding for the Xscriptor ecosystem.</li>
+  <li><b><a href="./docs">docs</a></b>: Build instructions for Arch Linux, Ubuntu, and Windows.</li>
+  <li><b><a href="./colors.md">colors.md</a></b>: 16-color palette definitions for all 12 themes.</li>
 </ul>
 
 <h2 align="center" id="preview"> Preview </h2>

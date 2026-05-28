@@ -2,21 +2,21 @@
 <idea-plugin>
   <id>com.xscriptor.theme</id>
   <name>Xscriptor Theme</name>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <vendor email="x@xscriptor.com" url="https://github.com/xscriptor">Xscriptor</vendor>
   
   <!-- Plugin icon -->
   <icon>pluginIcon.svg</icon>
 
   <description><![CDATA[
-  A modern theme collection for Android Studio/IntelliJ with both dark and light variants. Features clean contrast, vivid accents, and a focused, minimal UI. Includes bundled editor color schemes for both themes.
-  
-  • Dark Theme: Deep blacks with purple/blue accents for comfortable coding in low-light environments
-  • Light Theme: Clean whites with inverted color palette maintaining the same visual hierarchy
-  • Both themes include matching editor color schemes optimized for syntax highlighting
+  X theme collection for IntelliJ-based IDEs with 12 city-inspired color schemes (9 dark, 3 light). Each theme features a matching UI theme and editor color scheme with clean contrast, vivid accents, and a focused, minimal UI.
+
+  Dark themes: X, Lahabana, Miami, Paris, Tokio, Oslo, Berlin, Praha, Bogota
+  Light themes: Madrid, Helsinki, London
 ]]></description>
 
 <change-notes><![CDATA[
+  1.2.0 — Expanded to 12 city-inspired themes (9 dark, 3 light): X, Madrid, Lahabana, Miami, Paris, Tokio, Oslo, Helsinki, Berlin, London, Praha, Bogota. Renamed Xscriptor Theme to X. Light theme rebuilt with the Madrid color palette with darker accents for readability on white backgrounds. Paris background deepened to dark purple (#10081a). Bogota background set to dark red (#140606). Updated IntelliJ Platform Gradle Plugin from 2.10.5 to 2.16.0. Cleaned up build.gradle.kts to use modern intellijIdea() and direct bundledPlugin() declarations. Removed obsolete platformType and platformPlugins properties. Gradle wrapper and gradleVersion aligned to 9.0. Build compatibility re-targeted to Android Studio AI-253 (since-build=253, until-build=261.*). Both Islands UI themes and Darcula/Default editor color schemes inherit from the 16-color palettes defined in colors.md.
   1.1.0 — Migrated to Gradle 9 and the new IntelliJ Platform Gradle Plugin (2.x), updated target platform to 2025.3, configured Java 21 toolchain, and fixed ZIP packaging for IDE import. Broad product compatibility retained.
   1.0.1 — Added light theme variant with matching editor color scheme. Both dark and light themes available.
   1.0.0 — Initial release with full UI theme and editor scheme.
@@ -24,7 +24,7 @@
 
 
   <!-- Compatibility with IntelliJ/Android Studio versions -->
-  <idea-version since-build="211" until-build="253.*"/>
+  <idea-version since-build="261" until-build="261.*"/>
 
   <!-- Plugin dependencies -->
   <depends>com.intellij.modules.platform</depends>
@@ -32,18 +32,32 @@
 
   <!-- Plugin extensions -->
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Register light UI theme -->
-    <themeProvider id="xscriptor.light.theme" path="/themes/xscriptor_light_theme.theme.json"/>
-    
-    <!-- Register dark UI theme (default) -->
-    <themeProvider id="xscriptor.theme" path="/themes/xscriptor_theme.theme.json"/>
-    
-    <!-- Register light editor color scheme -->
-    <bundledColorScheme path="/colors/Xscriptor Light Theme.xml"/>
-    
-    <!-- Register dark editor color scheme (default) -->
-    <bundledColorScheme path="/colors/Xscriptor Theme.xml"/>
-  </extensions>
+    <themeProvider id="xscriptor.x.theme" path="/themes/x_theme.theme.json"/>
+    <themeProvider id="xscriptor.lahabana.theme" path="/themes/lahabana_theme.theme.json"/>
+    <themeProvider id="xscriptor.miami.theme" path="/themes/miami_theme.theme.json"/>
+    <themeProvider id="xscriptor.paris.theme" path="/themes/paris_theme.theme.json"/>
+    <themeProvider id="xscriptor.tokio.theme" path="/themes/tokio_theme.theme.json"/>
+    <themeProvider id="xscriptor.oslo.theme" path="/themes/oslo_theme.theme.json"/>
+    <themeProvider id="xscriptor.berlin.theme" path="/themes/berlin_theme.theme.json"/>
+    <themeProvider id="xscriptor.praha.theme" path="/themes/praha_theme.theme.json"/>
+    <themeProvider id="xscriptor.bogota.theme" path="/themes/bogota_theme.theme.json"/>
+    <themeProvider id="xscriptor.madrid.theme" path="/themes/madrid_theme.theme.json"/>
+    <themeProvider id="xscriptor.helsinki.theme" path="/themes/helsinki_theme.theme.json"/>
+    <themeProvider id="xscriptor.london.theme" path="/themes/london_theme.theme.json"/>
+
+        <bundledColorScheme path="/colors/X Theme.xml"/>
+        <bundledColorScheme path="/colors/Lahabana Theme.xml"/>
+        <bundledColorScheme path="/colors/Miami Theme.xml"/>
+        <bundledColorScheme path="/colors/Paris Theme.xml"/>
+        <bundledColorScheme path="/colors/Tokio Theme.xml"/>
+        <bundledColorScheme path="/colors/Oslo Theme.xml"/>
+        <bundledColorScheme path="/colors/Berlin Theme.xml"/>
+        <bundledColorScheme path="/colors/Praha Theme.xml"/>
+        <bundledColorScheme path="/colors/Bogota Theme.xml"/>
+        <bundledColorScheme path="/colors/Madrid Theme.xml"/>
+        <bundledColorScheme path="/colors/Helsinki Theme.xml"/>
+        <bundledColorScheme path="/colors/London Theme.xml"/>
+    </extensions>
 
   <!-- Plugin actions -->
   <actions>

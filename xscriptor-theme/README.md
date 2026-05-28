@@ -1,6 +1,9 @@
 # Xscriptor Theme
 
-A modern theme collection for Android Studio and IntelliJ IDEA featuring both dark and light variants with carefully crafted color palettes, vibrant accents, and optimal contrast for enhanced coding experience.
+X theme collection for IntelliJ-based IDEs with 12 city-inspired color schemes (9 dark, 3 light). Each theme features a matching UI theme and editor color scheme with clean contrast, vivid accents, and a focused, minimal UI.
+
+Dark themes: X, Lahabana, Miami, Paris, Tokio, Oslo, Berlin, Praha, Bogota
+Light themes: Madrid, Helsinki, London
 
 ## Available Themes
 
@@ -67,6 +70,7 @@ rm -rf ~/.gradle/caches
 
 ## Compatibility
 
+- IntelliJ Platform 2026.1+ (Islands UI)
 - IntelliJ IDEA
 - Android Studio
 - PyCharm
