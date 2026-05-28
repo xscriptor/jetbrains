@@ -9,15 +9,14 @@
   <icon>pluginIcon.svg</icon>
 
   <description><![CDATA[
-  A modern theme collection for IntelliJ-based IDEs with 12 city-inspired color schemes (9 dark, 3 light). Each theme features a matching UI theme and editor color scheme with clean contrast, vivid accents, and a focused, minimal UI.
+  X theme collection for IntelliJ-based IDEs with 12 city-inspired color schemes (9 dark, 3 light). Each theme features a matching UI theme and editor color scheme with clean contrast, vivid accents, and a focused, minimal UI.
 
   Dark themes: X, Lahabana, Miami, Paris, Tokio, Oslo, Berlin, Praha, Bogota
   Light themes: Madrid, Helsinki, London
 ]]></description>
 
 <change-notes><![CDATA[
-  1.3.0 — Expanded to 12 city-inspired themes (9 dark, 3 light): X, Madrid, Lahabana, Miami, Paris, Tokio, Oslo, Helsinki, Berlin, London, Praha, Bogota. Renamed Xscriptor Theme to X. Light theme rebuilt with Madrid palette. Re-targeted for Android Studio compatibility (2025.3+). Updated IntelliJ Platform Gradle Plugin to 2.16.0.
-  1.2.0 — Migrated both themes to Islands (2025.3+), aligned UI keys for Islands tabs/backgrounds, and updated target platform to 2026.1 (261.*).
+  1.2.0 — Expanded to 12 city-inspired themes (9 dark, 3 light): X, Madrid, Lahabana, Miami, Paris, Tokio, Oslo, Helsinki, Berlin, London, Praha, Bogota. Renamed Xscriptor Theme to X. Light theme rebuilt with the Madrid color palette with darker accents for readability on white backgrounds. Paris background deepened to dark purple (#10081a). Bogota background set to dark red (#140606). Updated IntelliJ Platform Gradle Plugin from 2.10.5 to 2.16.0. Cleaned up build.gradle.kts to use modern intellijIdea() and direct bundledPlugin() declarations. Removed obsolete platformType and platformPlugins properties. Gradle wrapper and gradleVersion aligned to 9.0. Build compatibility re-targeted to Android Studio AI-253 (since-build=253, until-build=261.*). Both Islands UI themes and Darcula/Default editor color schemes inherit from the 16-color palettes defined in colors.md.
   1.1.0 — Migrated to Gradle 9 and the new IntelliJ Platform Gradle Plugin (2.x), updated target platform to 2025.3, configured Java 21 toolchain, and fixed ZIP packaging for IDE import. Broad product compatibility retained.
   1.0.1 — Added light theme variant with matching editor color scheme. Both dark and light themes available.
   1.0.0 — Initial release with full UI theme and editor scheme.

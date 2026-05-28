@@ -3,6 +3,7 @@
 All notable changes to this project will be documented in this file.
 
 ## 1.2.0 — 2026-05-28
+- Added themes to standardize xscriptor color scheme.
 - Migrated dark and light themes to Islands (2025.3+).
 - Added Islands-specific UI keys for tab/background styling without altering palette colors.
 - Updated target IDE platform to `2026.1` with compatibility `261.*`.
