@@ -1,14 +1,12 @@
 plugins {
     java
-    id("org.jetbrains.intellij.platform") version "2.10.5"
+    id("org.jetbrains.intellij.platform") version "2.16.0"
 }
 
 val pluginGroup: String by project
 val pluginVersion: String by project
 val pluginName: String by project
-val platformType: String by project
 val platformVersion: String by project
-val platformPlugins: String by project
 val pluginSinceBuild: String by project
 val pluginUntilBuild: String by project
 
@@ -25,17 +23,14 @@ repositories {
 dependencies {
     intellijPlatform {
         intellijIdea(platformVersion)
-        platformPlugins.split(',')
-            .map { it.trim() }
-            .filter { it.isNotBlank() }
-            .forEach { bundledPlugin(it) }
+        bundledPlugin("com.intellij.modules.json")
     }
 }
 
 tasks {
     java {
         toolchain {
-            languageVersion.set(JavaLanguageVersion.of(21))
+            languageVersion = JavaLanguageVersion.of(21)
         }
     }
 }
@@ -43,6 +38,7 @@ tasks {
 intellijPlatform {
     buildSearchableOptions = false
     pluginConfiguration {
+        id = pluginGroup + ".theme"
         name = pluginName
         version = pluginVersion
         ideaVersion {

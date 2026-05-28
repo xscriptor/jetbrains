@@ -9,11 +9,10 @@
   <icon>pluginIcon.svg</icon>
 
   <description><![CDATA[
-  A modern theme collection for Android Studio/IntelliJ with both dark and light variants. Features clean contrast, vivid accents, and a focused, minimal UI. Includes bundled editor color schemes for both themes.
-  
-  • Dark Theme: Deep blacks with purple/blue accents for comfortable coding in low-light environments
-  • Light Theme: Clean whites with inverted color palette maintaining the same visual hierarchy
-  • Both themes include matching editor color schemes optimized for syntax highlighting
+  A modern theme collection for IntelliJ-based IDEs with 12 city-inspired color schemes (9 dark, 3 light). Each theme features a matching UI theme and editor color scheme with clean contrast, vivid accents, and a focused, minimal UI.
+
+  Dark themes: X, Lahabana, Miami, Paris, Tokio, Oslo, Berlin, Praha, Bogota
+  Light themes: Madrid, Helsinki, London
 ]]></description>
 
 <change-notes><![CDATA[
@@ -33,18 +32,32 @@
 
   <!-- Plugin extensions -->
   <extensions defaultExtensionNs="com.intellij">
-    <!-- Register light UI theme -->
-    <themeProvider id="xscriptor.light.theme" path="/themes/xscriptor_light_theme.theme.json"/>
-    
-    <!-- Register dark UI theme (default) -->
-    <themeProvider id="xscriptor.theme" path="/themes/xscriptor_theme.theme.json"/>
-    
-    <!-- Register light editor color scheme -->
-    <bundledColorScheme path="/colors/Xscriptor Light Theme.xml"/>
-    
-    <!-- Register dark editor color scheme (default) -->
-    <bundledColorScheme path="/colors/Xscriptor Theme.xml"/>
-  </extensions>
+    <themeProvider id="xscriptor.x.theme" path="/themes/x_theme.theme.json"/>
+    <themeProvider id="xscriptor.lahabana.theme" path="/themes/lahabana_theme.theme.json"/>
+    <themeProvider id="xscriptor.miami.theme" path="/themes/miami_theme.theme.json"/>
+    <themeProvider id="xscriptor.paris.theme" path="/themes/paris_theme.theme.json"/>
+    <themeProvider id="xscriptor.tokio.theme" path="/themes/tokio_theme.theme.json"/>
+    <themeProvider id="xscriptor.oslo.theme" path="/themes/oslo_theme.theme.json"/>
+    <themeProvider id="xscriptor.berlin.theme" path="/themes/berlin_theme.theme.json"/>
+    <themeProvider id="xscriptor.praha.theme" path="/themes/praha_theme.theme.json"/>
+    <themeProvider id="xscriptor.bogota.theme" path="/themes/bogota_theme.theme.json"/>
+    <themeProvider id="xscriptor.madrid.theme" path="/themes/madrid_theme.theme.json"/>
+    <themeProvider id="xscriptor.helsinki.theme" path="/themes/helsinki_theme.theme.json"/>
+    <themeProvider id="xscriptor.london.theme" path="/themes/london_theme.theme.json"/>
+
+        <bundledColorScheme path="/colors/X Theme.xml"/>
+        <bundledColorScheme path="/colors/Lahabana Theme.xml"/>
+        <bundledColorScheme path="/colors/Miami Theme.xml"/>
+        <bundledColorScheme path="/colors/Paris Theme.xml"/>
+        <bundledColorScheme path="/colors/Tokio Theme.xml"/>
+        <bundledColorScheme path="/colors/Oslo Theme.xml"/>
+        <bundledColorScheme path="/colors/Berlin Theme.xml"/>
+        <bundledColorScheme path="/colors/Praha Theme.xml"/>
+        <bundledColorScheme path="/colors/Bogota Theme.xml"/>
+        <bundledColorScheme path="/colors/Madrid Theme.xml"/>
+        <bundledColorScheme path="/colors/Helsinki Theme.xml"/>
+        <bundledColorScheme path="/colors/London Theme.xml"/>
+    </extensions>
 
   <!-- Plugin actions -->
   <actions>
