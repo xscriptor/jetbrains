@@ -29,20 +29,20 @@
 ```json
 {
     "color0":  "#fafafa",
-    "color1":  "#cc0033",
-    "color2":  "#009933",
-    "color3":  "#b8860b",
-    "color4":  "#0099cc",
-    "color5":  "#6633cc",
-    "color6":  "#0099cc",
+    "color1":  "#990026",
+    "color2":  "#007a28",
+    "color3":  "#8a6408",
+    "color4":  "#007a9e",
+    "color5":  "#4d2699",
+    "color6":  "#007a9e",
     "color7":  "#1a1a1a",
-    "color8":  "#666666",
-    "color9":  "#cc0033",
-    "color10": "#009933",
-    "color11": "#b8860b",
-    "color12": "#0099cc",
-    "color13": "#6633cc",
-    "color14": "#0099cc",
+    "color8":  "#4d4d4d",
+    "color9":  "#990026",
+    "color10": "#007a28",
+    "color11": "#8a6408",
+    "color12": "#007a9e",
+    "color13": "#4d2699",
+    "color14": "#007a9e",
     "color15": "#1a1a1a"
 }
 ```
@@ -97,7 +97,7 @@
 
 ```json
 {
-    "color0":  "#222222",
+    "color0":  "#10081a",
     "color1":  "#fc618d",
     "color2":  "#7bd88f",
     "color3":  "#fce566",
@@ -258,7 +258,7 @@
 
 ```json
 {
-    "color0":  "#222222",
+    "color0":  "#140606",
     "color1":  "#fc618d",
     "color2":  "#7bd88f",
     "color3":  "#ffed89",

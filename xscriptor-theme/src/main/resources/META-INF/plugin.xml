@@ -16,6 +16,7 @@
 ]]></description>
 
 <change-notes><![CDATA[
+  1.3.0 — Expanded to 12 city-inspired themes (9 dark, 3 light): X, Madrid, Lahabana, Miami, Paris, Tokio, Oslo, Helsinki, Berlin, London, Praha, Bogota. Renamed Xscriptor Theme to X. Light theme rebuilt with Madrid palette. Re-targeted for Android Studio compatibility (2025.3+). Updated IntelliJ Platform Gradle Plugin to 2.16.0.
   1.2.0 — Migrated both themes to Islands (2025.3+), aligned UI keys for Islands tabs/backgrounds, and updated target platform to 2026.1 (261.*).
   1.1.0 — Migrated to Gradle 9 and the new IntelliJ Platform Gradle Plugin (2.x), updated target platform to 2025.3, configured Java 21 toolchain, and fixed ZIP packaging for IDE import. Broad product compatibility retained.
   1.0.1 — Added light theme variant with matching editor color scheme. Both dark and light themes available.
