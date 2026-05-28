@@ -2,7 +2,7 @@
 <idea-plugin>
   <id>com.xscriptor.theme</id>
   <name>Xscriptor Theme</name>
-  <version>1.1.0</version>
+  <version>1.2.0</version>
   <vendor email="x@xscriptor.com" url="https://github.com/xscriptor">Xscriptor</vendor>
   
   <!-- Plugin icon -->
@@ -17,6 +17,7 @@
 ]]></description>
 
 <change-notes><![CDATA[
+  1.2.0 — Migrated both themes to Islands (2025.3+), aligned UI keys for Islands tabs/backgrounds, and updated target platform to 2026.1 (261.*).
   1.1.0 — Migrated to Gradle 9 and the new IntelliJ Platform Gradle Plugin (2.x), updated target platform to 2025.3, configured Java 21 toolchain, and fixed ZIP packaging for IDE import. Broad product compatibility retained.
   1.0.1 — Added light theme variant with matching editor color scheme. Both dark and light themes available.
   1.0.0 — Initial release with full UI theme and editor scheme.
@@ -24,7 +25,7 @@
 
 
   <!-- Compatibility with IntelliJ/Android Studio versions -->
-  <idea-version since-build="211" until-build="253.*"/>
+  <idea-version since-build="261" until-build="261.*"/>
 
   <!-- Plugin dependencies -->
   <depends>com.intellij.modules.platform</depends>

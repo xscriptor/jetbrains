@@ -67,6 +67,7 @@ rm -rf ~/.gradle/caches
 
 ## Compatibility
 
+- IntelliJ Platform 2026.1+ (Islands UI)
 - IntelliJ IDEA
 - Android Studio
 - PyCharm

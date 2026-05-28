@@ -3,6 +3,7 @@
   "dark": true,
   "author": "Xscriptor",
   "editorScheme": "/colors/Xscriptor Theme.xml",
+  "parentTheme": "Islands Dark",
   "colors": {
     "primaryBackground": "#0a0a0a",
     "secondaryBackground": "#0f0f0f",
@@ -20,7 +21,8 @@
     "border": "#363537",
     "borderSecondary": "#525053",
     "selection": "#bab6c026",
-    "hover": "#69676c26"
+    "hover": "#69676c26",
+    "transparent": "#00000000"
   },
   "ui": {
     "*": {
@@ -35,6 +37,20 @@
       "focusColor": "accent",
       "focusedBorderColor": "accent"
     },
+    "Islands": 1,
+    "Island.borderColor": "primaryBackground",
+    "MainWindow.background": "secondaryBackground",
+    "StatusBar.borderColor": "transparent",
+    "ToolWindow.Stripe.borderColor": "transparent",
+    "MainToolbar.borderColor": "transparent",
+    "ToolWindow.background": "primaryBackground",
+    "ToolWindow.Header.background": "primaryBackground",
+    "ToolWindow.Header.inactiveBackground": "primaryBackground",
+    "EditorTabs.background": "primaryBackground",
+    "EditorTabs.underlinedBorderColor": "accent",
+    "EditorTabs.inactiveUnderlinedTabBorderColor": "borderSecondary",
+    "EditorTabs.underlinedTabBackground": "selection",
+    "EditorTabs.inactiveUnderlinedTabBackground": "hover",
     "ActionButton": {
       "hoverBackground": "hover",
       "hoverBorderColor": "borderSecondary",
