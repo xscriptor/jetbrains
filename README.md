@@ -4,7 +4,16 @@
 
 <p>A centralized collection of resources, themes, and configurations designed to enhance the development experience across the JetBrains IDE family. This repository serves as the core for the Xscriptor ecosystem, integrating visual enhancements, accessibility adjustments, and UI modifications.</p>
 
-<img src="https://xscriptor.github.io/badges/ide/android-studio.svg" alt="android-studio" /> <img src="https://xscriptor.github.io/badges/ide/goland.svg" alt="goland" /> <img src="https://xscriptor.github.io/badges/ide/intellij.svg" alt="intellij" /> <img src="https://xscriptor.github.io/badges/ai/pytorch.svg" alt="pytorch" /> <img src="https://xscriptor.github.io/badges/ide/pycharm.svg" alt="pycharm" /> <img src="https://xscriptor.github.io/badges/ide/clion.svg" alt="clion" />
+<img src="https://img.shields.io/badge/IntelliJ%20IDEA-000000?style=flat-square&logo=intellij-idea&logoColor=white" alt="IntelliJ IDEA" />
+<img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=flat-square&logo=android-studio&logoColor=white" alt="Android Studio" />
+<img src="https://img.shields.io/badge/GoLand-000000?style=flat-square&logo=goland&logoColor=white" alt="GoLand" />
+<img src="https://img.shields.io/badge/PyCharm-000000?style=flat-square&logo=pycharm&logoColor=white" alt="PyCharm" />
+<img src="https://img.shields.io/badge/CLion-000000?style=flat-square&logo=clion&logoColor=white" alt="CLion" />
+<img src="https://img.shields.io/badge/version-1.2.0-blue?style=flat-square" alt="Version" />
+<img src="https://img.shields.io/badge/license-MIT-green?style=flat-square" alt="License" />
+<img src="https://img.shields.io/badge/Java-21-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java 21" />
+<img src="https://img.shields.io/badge/Gradle-9.0-02303A?style=flat-square&logo=gradle&logoColor=white" alt="Gradle 9.0" />
+<img src="https://img.shields.io/badge/JetBrains%20Platform-2025.3-purple?style=flat-square&logo=jetbrains&logoColor=white" alt="JetBrains Platform 2025.3" />
 
 </div>
 
