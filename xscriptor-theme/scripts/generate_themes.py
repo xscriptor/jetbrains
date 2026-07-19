@@ -2,8 +2,9 @@
 """
 Xscriptor Theme Generator
 =========================
-Reads colors.md and produces all theme.json + editor XML files
-for the Xscriptor JetBrains plugin (12 themes).
+Reads colors.json (or colors.md as fallback) and produces all
+theme.json + editor XML files for the Xscriptor JetBrains plugin
+(12 themes).
 
 Usage:
     python3 scripts/generate_themes.py
@@ -28,6 +29,7 @@ from pathlib import Path
 # ---------------------------------------------------------------------------
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROJECT_DIR = SCRIPT_DIR.parent
+COLORS_JSON = PROJECT_DIR.parent / "colors.json"
 COLORS_MD = PROJECT_DIR.parent / "colors.md"
 RESOURCES_DIR = PROJECT_DIR / "src" / "main" / "resources"
 TEMPLATES_DIR = RESOURCES_DIR / "templates"  # optional, created below
@@ -72,10 +74,13 @@ def alpha(c: str, a: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Parse colors.md
+# Load palettes from colors.json (primary) or colors.md (fallback)
 # ---------------------------------------------------------------------------
-def parse_palettes(path: Path) -> dict:
-    text = path.read_text()
+def load_palettes() -> dict:
+    if COLORS_JSON.exists():
+        return json.loads(COLORS_JSON.read_text())
+    # Fallback: parse HTML from colors.md
+    text = COLORS_MD.read_text()
     results = {}
     for name, raw in re.findall(
         r"<h2[^>]*>(.*?)</h2>\s*```json\s*(.*?)\s*```", text, re.DOTALL
@@ -250,7 +255,7 @@ def light_xml_subs(pal: dict) -> dict:
 # ---------------------------------------------------------------------------
 # Theme JSON generators
 # ---------------------------------------------------------------------------
-def make_dark_json(name: str, cs_file: str, cols: dict) -> str:
+def make_dark_json(name: str, cs_file: str, cols: dict, indent: int | None = 2) -> str:
     colors_json = {
         k: cols[k]
         for k in [
@@ -301,14 +306,14 @@ def make_dark_json(name: str, cs_file: str, cols: dict) -> str:
                 }
             },
         },
-        indent=2,
+        indent=indent,
     )
     raw = raw.replace("PLACEHOLDER_accentHover", cols["accentHover"])
     raw = raw.replace("PLACEHOLDER_accentPressed", cols["accentPressed"])
     return raw
 
 
-def make_light_json(name: str, cs_file: str, cols: dict) -> str:
+def make_light_json(name: str, cs_file: str, cols: dict, indent: int | None = 2) -> str:
     colors_json = {
         k: cols[k]
         for k in [
@@ -329,12 +334,12 @@ def make_light_json(name: str, cs_file: str, cols: dict) -> str:
             "colors": colors_json,
             "ui": LIGHT_UI,
         },
-        indent=2,
+        indent=indent,
     )
 
 
-# ---- Static UI blocks (generated once, reused for all themes) ----
 
+# ---- Static UI blocks (generated once, reused for all themes) ----
 def _build_dark_ui_template(cols: dict) -> dict:
     return {
         "*": {
@@ -931,8 +936,9 @@ def postprocess_light_json(text: str, cols: dict) -> str:
 # ---------------------------------------------------------------------------
 # Main generator
 # ---------------------------------------------------------------------------
-def generate(output_root: Path, dark_template_xml: str, light_template_xml: str):
-    palettes = parse_palettes(COLORS_MD)
+def generate(output_root: Path, dark_template_xml: str, light_template_xml: str,
+             indent: int | None = 2):
+    palettes = load_palettes()
 
     themes_out = output_root / "themes"
     colors_out = output_root / "colors"
@@ -951,7 +957,7 @@ def generate(output_root: Path, dark_template_xml: str, light_template_xml: str)
 
         # Theme JSON
         json_path = themes_out / f"{sn}_theme.theme.json"
-        json_path.write_text(make_dark_json(name, cs, cols))
+        json_path.write_text(make_dark_json(name, cs, cols, indent))
 
         # Editor XML
         xml_path = colors_out / f"{name} Theme.xml"
@@ -973,7 +979,7 @@ def generate(output_root: Path, dark_template_xml: str, light_template_xml: str)
 
         # Theme JSON
         json_path = themes_out / f"{sn}_theme.theme.json"
-        raw = make_light_json(name, cs, cols)
+        raw = make_light_json(name, cs, cols, indent)
         json_path.write_text(postprocess_light_json(raw, cols))
 
         # Editor XML
@@ -1013,7 +1019,7 @@ def generate(output_root: Path, dark_template_xml: str, light_template_xml: str)
 # ===========================================================================
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate Xscriptor Theme files from colors.md"
+        description="Generate Xscriptor Theme files from colors.json"
     )
     parser.add_argument(
         "--output",
@@ -1025,13 +1031,17 @@ def main():
         "--templates",
         type=Path,
         default=None,
-        help="Path to folder containing XML template files "
-             "(default: src/main/resources/colors/ original files from git)",
+        help="Path to folder containing dark_template.xml and light_template.xml",
     )
     parser.add_argument(
         "--apply",
         action="store_true",
         help="Write directly to src/main/resources/ (overwrites real files!)",
+    )
+    parser.add_argument(
+        "--compact",
+        action="store_true",
+        help="Emit minified JSON (default is pretty-printed)",
     )
     args = parser.parse_args()
 
@@ -1071,7 +1081,8 @@ def main():
     else:
         output_root = args.output
 
-    generate(output_root, dark_template, light_template)
+    indent = None if args.compact else 2
+    generate(output_root, dark_template, light_template, indent)
 
 
 if __name__ == "__main__":

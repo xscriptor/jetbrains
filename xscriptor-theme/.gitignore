@@ -9,6 +9,9 @@ build/
 *.iml
 out/
 
+# Generated theme output (from generate_themes.py)
+scripts/output/
+
 # Configuración y archivos temporales
 local.properties
 .DS_Store
