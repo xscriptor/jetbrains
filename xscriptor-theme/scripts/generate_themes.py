@@ -2,9 +2,8 @@
 """
 Xscriptor Theme Generator
 =========================
-Reads colors.json (or colors.md as fallback) and produces all
-theme.json + editor XML files for the Xscriptor JetBrains plugin
-(12 themes).
+Reads colors.md and produces all theme.json + editor XML files
+for the Xscriptor JetBrains plugin (12 themes).
 
 Usage:
     python3 scripts/generate_themes.py
@@ -74,12 +73,11 @@ def alpha(c: str, a: str) -> str:
 
 
 # ---------------------------------------------------------------------------
-# Load palettes from colors.json (primary) or colors.md (fallback)
+# Parse colors.md
 # ---------------------------------------------------------------------------
 def load_palettes() -> dict:
     if COLORS_JSON.exists():
         return json.loads(COLORS_JSON.read_text())
-    # Fallback: parse HTML from colors.md
     text = COLORS_MD.read_text()
     results = {}
     for name, raw in re.findall(
@@ -99,13 +97,15 @@ LIGHT_THEMES = ["Madrid", "Helsinki", "London"]
 
 def derive_dark_colors(pal: dict) -> dict:
     c = pal
+    bg = c.get("background", c["color0"])
+    fg = c.get("foreground", c["color7"])
     return {
-        "primaryBackground": darken(c["color0"], 0.78),
-        "secondaryBackground": darken(c["color0"], 0.70),
-        "tertiaryBackground": darken(c["color0"], 0.50),
-        "primaryForeground": c["color7"],
-        "secondaryForeground": blend(c["color7"], c["color0"], 0.28),
-        "tertiaryForeground": blend(c["color7"], c["color0"], 0.45),
+        "primaryBackground": darken(bg, 0.78),
+        "secondaryBackground": darken(bg, 0.70),
+        "tertiaryBackground": darken(bg, 0.50),
+        "primaryForeground": fg,
+        "secondaryForeground": blend(fg, bg, 0.28),
+        "tertiaryForeground": blend(fg, bg, 0.45),
         "accent": c["color1"],
         "accentSecondary": c["color6"],
         "success": c["color2"],
@@ -115,13 +115,13 @@ def derive_dark_colors(pal: dict) -> dict:
         "highlight": c["color3"],
         "border": c["color8"],
         "borderSecondary": lighten(c["color8"], 0.12),
-        "selection": blend(c["color7"], c["color0"], 0.15) + "26",
-        "hover": blend(c["color8"], c["color0"], 0.10) + "26",
+        "selection": blend(fg, bg, 0.15) + "26",
+        "hover": blend(c["color8"], bg, 0.10) + "26",
         "transparent": "#00000000",
-        "iconGrey": blend(c["color7"], c["color0"], 0.45),
+        "iconGrey": blend(fg, bg, 0.45),
         "iconGreyInline": c["color8"],
         "iconGreyInlineDark": lighten(c["color8"], 0.12),
-        "iconBlackText": darken(c["color0"], 0.78),
+        "iconBlackText": darken(bg, 0.78),
         "iconFocusWide": c["color1"] + "26",
         "accentHover": darken(c["color1"], 0.10),
         "accentPressed": darken(c["color1"], 0.18),
@@ -130,13 +130,15 @@ def derive_dark_colors(pal: dict) -> dict:
 
 def derive_light_colors(pal: dict) -> dict:
     c = pal
+    bg = c.get("background", c["color0"])
+    fg = c.get("foreground", c["color7"])
     return {
-        "primaryBackground": c["color0"],
-        "secondaryBackground": darken(c["color0"], 0.03),
-        "tertiaryBackground": darken(c["color0"], 0.06),
-        "primaryForeground": c["color7"],
-        "secondaryForeground": lighten(c["color7"], 0.30),
-        "tertiaryForeground": lighten(c["color7"], 0.50),
+        "primaryBackground": bg,
+        "secondaryBackground": darken(bg, 0.03),
+        "tertiaryBackground": darken(bg, 0.06),
+        "primaryForeground": fg,
+        "secondaryForeground": lighten(fg, 0.30),
+        "tertiaryForeground": lighten(fg, 0.50),
         "accent": c["color1"],
         "accentSecondary": c["color4"],
         "success": c["color2"],
@@ -144,10 +146,10 @@ def derive_light_colors(pal: dict) -> dict:
         "error": c["color1"],
         "info": c["color5"],
         "highlight": c["color3"],
-        "border": darken(c["color0"], 0.16),
-        "borderSecondary": darken(c["color0"], 0.38),
-        "selection": lighten(c["color7"], 0.65) + "1a",
-        "hover": lighten(c["color7"], 0.55) + "1a",
+        "border": darken(bg, 0.16),
+        "borderSecondary": darken(bg, 0.38),
+        "selection": lighten(fg, 0.65) + "1a",
+        "hover": lighten(fg, 0.55) + "1a",
         "transparent": "#00000000",
         "accentHover": darken(c["color1"], 0.15),
         "accentPressed": darken(c["color1"], 0.28),
@@ -159,7 +161,9 @@ def derive_light_colors(pal: dict) -> dict:
 # ---------------------------------------------------------------------------
 def dark_xml_subs(pal: dict) -> dict:
     c = pal
-    c0, c7, c8 = c["color0"], c["color7"], c["color8"]
+    c0 = c.get("background", c["color0"])
+    c7 = c.get("foreground", c["color7"])
+    c8 = c["color8"]
     bg = darken(c0, 0.72)
     bg_d = darken(c0, 0.80)
     bg_i = darken(c0, 0.62)
@@ -213,7 +217,8 @@ def dark_xml_subs(pal: dict) -> dict:
 # ---------------------------------------------------------------------------
 def light_xml_subs(pal: dict) -> dict:
     c = pal
-    c0, c7 = c["color0"], c["color7"]
+    c0 = c.get("background", c["color0"])
+    c7 = c.get("foreground", c["color7"])
     bg = c0
     sbg = darken(c0, 0.03)
     sel = darken(c0, 0.10)
