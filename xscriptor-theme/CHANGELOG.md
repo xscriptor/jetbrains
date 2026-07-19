@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.2.1 — 2026-07-19
+- Extended build compatibility to `262.*` (IntelliJ 2026.2+).
+- Fixed `plugin.xml` idea-version to align with `gradle.properties` (since-build=253).
+
 ## 1.2.0 — 2026-05-28
 - Added themes to standardize xscriptor color scheme.
 - Migrated dark and light themes to Islands (2025.3+).
