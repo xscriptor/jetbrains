@@ -1,4 +1,6 @@
+# Kotlin build scripts
 *.kts linguist-language=Kotlin
 
+# Binary assets
 *.png binary
 *.svg binary

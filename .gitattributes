@@ -1,26 +1,14 @@
-# Language detection overrides for GitHub Linguist
+# Language detection for GitHub Linguist
 
-# Kotlin build scripts
+# Kotlin build scripts (core plugin infrastructure)
 *.kts linguist-language=Kotlin
 
-# Theme and color scheme files — core plugin content
-*.theme.json linguist-language=JSON
-themes/*.theme.json linguist-language=JSON
-colors/*.xml linguist-language=XML
-
-# Utility scripts (not the plugin itself)
-.github/scripts/sync_roadmap.py linguist-vendored
-xscriptor-theme/scripts/generate_themes.py linguist-vendored
+# Python utility scripts (not the plugin itself)
+*.py linguist-vendored
 
 # Documentation
 *.md linguist-documentation
 docs/* linguist-documentation
-CODE_OF_CONDUCT.md linguist-documentation
-CONTRIBUTING.md linguist-documentation
-ROADMAP.md linguist-documentation
-SECURITY.md linguist-documentation
-SUPPORT.md linguist-documentation
-CHANGELOG.md linguist-documentation
 
 # Binary assets
 *.png binary
