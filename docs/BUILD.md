@@ -14,7 +14,7 @@
 
 <h2>Step 1: Clone the Repository</h2>
 
-<pre><code>git clone https://github.com/xscriptor/jetbrains.git
+<pre><code>git clone https://github.com/xscriptor-colors/jetbrains.git
 cd jetbrains/xscriptor-theme</code></pre>
 
 <h2>Step 2: Build the Plugin</h2>
