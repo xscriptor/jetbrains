@@ -93,5 +93,5 @@
 <h2 align="center" id="x">X</h2>
 
 <a href="https://github.com/xscriptor">XGitHub</a> &middot;
-<a href="https://dev.xscriptor.com">XWeb</a>
+<a href="https://xscriptor.io">XWeb</a>
 </div>
