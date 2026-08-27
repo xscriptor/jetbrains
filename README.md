@@ -1,4 +1,5 @@
-<h1 align="center"> Jetbrains - Xscriptor</h1>
+<h1 align="center"> Jetbrains <img src="./assets/icon.png" width="30" alt="Xscriptor logo" />
+</h1>
 
 <div align="center">
 
@@ -16,10 +17,6 @@
 <img src="https://img.shields.io/badge/JetBrains%20Platform-2025.3-purple?style=flat-square&logo=jetbrains&logoColor=white" alt="JetBrains Platform 2025.3" />
 
 </div>
-
-<p align="center">
-  <img src="./assets/icon.png" width="100" alt="Xscriptor logo" />
-</p>
 
 <h2 align="center">Contents</h2>
 <p align="center">
@@ -93,5 +90,5 @@
 <h2 align="center" id="x">X</h2>
 
 <a href="https://github.com/xscriptor">XGitHub</a> &middot;
-<a href="https://xscriptor.io">XWeb</a>
+<a href="https://xscriptor.io">Dev</a>
 </div>
